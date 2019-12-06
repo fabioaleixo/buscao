@@ -1,0 +1,253 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 10px; }
+
+header {
+  -webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  padding: 1rem 0 1rem;
+  background: #833ab4;
+  background: linear-gradient(0deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 9999; }
+  @media (min-width: 768px) {
+    header {
+      padding: 2rem 2rem 1rem; } }
+  header div {
+    margin: 0 auto;
+    width: 90%; }
+    @media (min-width: 768px) {
+      header div {
+        width: 50%; } }
+
+#logo {
+  max-width: 80px;
+  vertical-align: top; }
+  @media (min-width: 768px) {
+    #logo {
+      width: 125px; } }
+
+h1 {
+  font-family: "Solway", "Roboto", "Indie Flower", "Fredoka One", "Old Standard TT";
+  font-size: 2.5rem;
+  color: white;
+  display: inline-block;
+  width: 70%;
+  margin: 1rem 0 0 1rem; }
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 4rem;
+      margin: 0 0 0 0.5rem;
+      width: 80%; } }
+  h1 small {
+    border-top: 1px rgba(255, 255, 255, 0.5) solid;
+    font-size: 1rem;
+    box-sizing: border-box;
+    padding: 0.5rem 0 0;
+    position: relative;
+    top: -6px;
+    display: block;
+    margin: 0.5rem 0 0; }
+    @media (min-width: 768px) {
+      h1 small {
+        display: inline-block;
+        border-top: 0;
+        border-left: 1px rgba(255, 255, 255, 0.5) solid;
+        padding: 0 0 0 1rem;
+        margin: 0;
+        font-size: 2rem; } }
+
+h2 {
+  font-size: 2rem;
+  font-family: "Solway", "Roboto", "Indie Flower", "Fredoka One", "Old Standard TT";
+  text-align: left;
+  margin: 2rem 0 1rem; }
+
+h3 {
+  font-size: 3rem;
+  font-family: "Solway", "Roboto", "Indie Flower", "Fredoka One", "Old Standard TT";
+  text-align: center;
+  margin: 1.5rem 0 1rem;
+  color: #EF2334; }
+
+p {
+  font-size: 1.5rem;
+  font-family: "Solway", "Roboto", "Indie Flower", "Fredoka One", "Old Standard TT";
+  margin: 1rem 0 0.5rem; }
+
+section {
+  max-width: 1200px;
+  margin: 9rem auto 0;
+  display: block; }
+  @media (min-width: 768px) {
+    section {
+      display: flex;
+      justify-content: center; } }
+
+section div {
+  width: 90%;
+  margin: 0 auto; }
+  section div:first-child {
+    position: relative; }
+    @media (min-width: 768px) {
+      section div:first-child {
+        margin: 0 2% 0 0;
+        min-height: 600px;
+        padding: 5rem 0 0; } }
+    section div:first-child #icoLoading {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      margin: 50% 50%;
+      left: -50px;
+      top: -50px;
+      opacity: 0;
+      -webkit-transition: all 1s;
+      transition: all 1s;
+      z-index: 1; }
+    section div:first-child #icoLoading.fullOpacity {
+      opacity: 0.7; }
+    section div:first-child img {
+      margin: 6rem 0 0; }
+    section div:first-child img.borda {
+      -webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.5);
+      background: white;
+      margin: 0; }
+
+#imgCao {
+  display: none;
+  width: 100%;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  opacity: 1; }
+  @media (min-width: 768px) {
+    #imgCao {
+      display: block; } }
+
+#imgCao.lessOpacity {
+  opacity: 0; }
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-sizing: border-box;
+  padding: 0.5rem;
+  border-radius: 0;
+  background-color: rgba(0, 0, 0, 0.05);
+  background-image: url("../imagens/arrow-down.png");
+  background-repeat: no-repeat;
+  background-position: right 1rem bottom 0.5rem;
+  border: 0;
+  width: 100%;
+  font-family: "Solway", "Roboto", "Indie Flower", "Fredoka One", "Old Standard TT";
+  font-size: 1.2rem; }
+  @media (min-width: 768px) {
+    select {
+      font-size: 2rem;
+      background-position: right 1rem bottom 0.7rem; } }
+
+.small {
+  font-size: 1rem !important;
+  background-position: right 1rem bottom 0.2rem; }
+
+select::-ms-expand {
+  display: none; }
+
+input[type=text] {
+  box-sizing: border-box;
+  padding: 0.5rem;
+  border: 0;
+  border-radius: 0;
+  background-color: rgba(0, 0, 0, 0.05);
+  width: 84%;
+  font-family: "Solway", "Roboto", "Indie Flower", "Fredoka One", "Old Standard TT";
+  font-size: 1.2rem; }
+  @media (min-width: 768px) {
+    input[type=text] {
+      font-size: 2rem;
+      width: 90%; } }
+
+button {
+  width: 15%;
+  vertical-align: bottom;
+  border: 0;
+  height: 39px;
+  background: #00d4ff;
+  cursor: pointer;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-border-radius: 0 0.5rem 0.5rem 0;
+  border-radius: 0 0.5rem 0.5rem 0;
+  background-image: url("../imagens/btn-refresh.png");
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center center; }
+  @media (min-width: 768px) {
+    button {
+      height: 54px;
+      width: 9%; } }
+  button:hover, button:focus {
+    background: #090979;
+    background-image: url("../imagens/btn-refresh.png");
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center center; }
+
+#btnSalvar {
+  -webkit-border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+  background-image: none;
+  width: auto;
+  font-size: 1.2rem;
+  color: white;
+  font-family: "Solway", "Roboto", "Indie Flower", "Fredoka One", "Old Standard TT"; }
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none; }
+
+footer {
+  background: black;
+  background: linear-gradient(180deg, black 0%, #090979 15%, #00d4ff 100%);
+  box-sizing: border-box;
+  padding: 1rem;
+  margin: 2rem 0 0;
+  width: 100%;
+  -webkit-transition: all 1s;
+  transition: all 1s; }
+  @media (min-width: 768px) {
+    footer {
+      padding: 2rem;
+      margin: -110px 0 0; } }
+  footer p {
+    color: white;
+    font-family: "Solway", "Roboto", "Indie Flower", "Fredoka One", "Old Standard TT";
+    font-size: 0.8rem;
+    text-align: center; }
+    @media (min-width: 768px) {
+      footer p {
+        font-size: 1rem; } }
+  footer a {
+    color: white; }
+
+.noMargin {
+  margin: 1rem 0 0;
+  -webkit-transition: all 1s;
+  transition: all 1s; }
+
+hr {
+  margin: 2rem 0 0;
+  padding: 0; }
+
+#erroTxt {
+  color: #EF2334; }

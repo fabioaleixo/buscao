@@ -1,0 +1,245 @@
+//@import url('https://fonts.googleapis.com/css?family=Solway&display=swap')
+
+$light-gray: rgba(0,0,0,.05)
+$main-font: 'Solway','Roboto','Indie Flower','Fredoka One','Old Standard TT'
+$breakpoint-tablet: 768px
+
+body
+    padding: 0
+    margin: 0
+    font-size: 10px
+
+header
+    -webkit-box-shadow: 0 0 10px 1px rgba(0,0,0,.5)
+    box-shadow: 0 0 10px 1px rgba(0,0,0,.5)
+    box-sizing: border-box
+    padding: 1rem 0 1rem
+    background: rgb(131,58,180)
+    background: linear-gradient(0deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%)
+    position: fixed
+    width: 100%
+    left: 0
+    top: 0
+    z-index: 9999
+    @media (min-width: $breakpoint-tablet)
+        padding: 2rem 2rem 1rem
+    div
+        margin: 0 auto
+        width: 90%
+        @media (min-width: $breakpoint-tablet)
+            width: 50%
+
+#logo
+    max-width: 80px
+    vertical-align: top
+    @media (min-width: $breakpoint-tablet)
+        width: 125px
+    
+h1
+    font-family: $main-font
+    font-size: 2.5rem
+    color: white
+    display: inline-block
+    width: 70%
+    margin: 1rem 0 0 1rem
+    @media (min-width: $breakpoint-tablet)
+        font-size: 4rem
+        margin: 0 0 0 .5rem
+        width: 80%
+    small
+        border-top: 1px rgba(255,255,255,.5) solid
+        font-size: 1rem
+        box-sizing: border-box
+        padding: .5rem 0 0
+        position: relative
+        top: -6px
+        display: block
+        margin: .5rem 0 0
+        @media (min-width: $breakpoint-tablet)
+            display: inline-block
+            border-top: 0
+            border-left: 1px rgba(255,255,255,.5) solid
+            padding: 0 0 0 1rem
+            margin: 0
+            font-size: 2rem
+        
+
+h2
+    font-size: 2rem
+    font-family: $main-font
+    text-align: left
+    margin: 2rem 0 1rem
+    
+h3 
+    font-size: 3rem
+    font-family: $main-font
+    text-align: center
+    margin: 1.5rem 0 1rem
+    color: #EF2334
+    
+p
+    font-size: 1.5rem
+    font-family: $main-font
+    margin: 1rem 0 .5rem
+
+section
+    max-width: 1200px
+    margin: 9rem auto 0
+    display: block
+    @media (min-width: $breakpoint-tablet)
+        display: flex
+        justify-content: center
+
+section div
+    width: 90%
+    margin: 0 auto
+    &:first-child
+        position: relative
+        @media (min-width: $breakpoint-tablet)
+            margin: 0 2% 0 0
+            min-height: 600px
+            padding: 5rem 0 0
+        #icoLoading
+            position: absolute
+            width: 100px
+            height: 100px
+            margin: 50% 50%
+            left: -50px
+            top: -50px
+            opacity: 0
+            -webkit-transition: all 1s
+            transition: all 1s
+            z-index: 1  
+        #icoLoading.fullOpacity
+            opacity: .7
+        img
+            margin: 6rem 0 0
+        img.borda
+            -webkit-box-shadow: 0 0 10px 1px rgba(0,0,0,.5)
+            box-shadow: 0 0 10px 1px rgba(0,0,0,.5)
+            background: white
+            margin: 0
+    
+#imgCao
+    display: none
+    width: 100%
+    -webkit-transition: all 1s
+    transition: all 1s
+    opacity: 1
+    @media (min-width: $breakpoint-tablet)
+        display: block
+#imgCao.lessOpacity
+    opacity: 0
+    
+  
+select
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+    box-sizing: border-box
+    padding: .5rem
+    border-radius: 0
+    background-color: $light-gray
+    background-image: url("../imagens/arrow-down.png")
+    background-repeat: no-repeat
+    background-position: right 1rem bottom .5rem
+    border: 0
+    width: 100%
+    font-family: $main-font
+    font-size: 1.2rem
+    @media (min-width: $breakpoint-tablet)
+        font-size: 2rem
+        background-position: right 1rem bottom .7rem
+.small
+    font-size: 1rem!important
+    background-position: right 1rem bottom .2rem
+
+select::-ms-expand
+    display: none
+    
+input[type=text]
+    box-sizing: border-box
+    padding: .5rem
+    border: 0
+    border-radius: 0
+    background-color: $light-gray
+    width: 84%
+    font-family: $main-font
+    font-size: 1.2rem
+    @media (min-width: $breakpoint-tablet)
+        font-size: 2rem
+        width: 90%
+
+button
+    width: 15%
+    vertical-align: bottom
+    border: 0
+    height: 39px
+    background: rgba(0,212,255,1)
+    cursor: pointer
+    -webkit-transition: all 1s
+    transition: all 1s
+    -webkit-border-radius: 0 .5rem .5rem 0
+    border-radius: 0 .5rem .5rem 0
+    background-image: url('../imagens/btn-refresh.png')
+    background-size: 70%
+    background-repeat: no-repeat
+    background-position: center center
+    @media (min-width: $breakpoint-tablet)
+        height: 54px
+        width: 9%
+    &:hover,&:focus
+        background: rgba(9,9,121,1)
+        background-image: url('../imagens/btn-refresh.png')
+        background-size: 70%
+        background-repeat: no-repeat
+        background-position: center center
+#btnSalvar
+    -webkit-border-radius: .5rem
+    border-radius: .5rem
+    margin: 1rem 0
+    background-image: none
+    width: auto
+    font-size: 1.2rem
+    color: white
+    font-family: $main-font
+  
+input:focus,
+select:focus,
+textarea:focus,
+button:focus
+    outline: none
+
+footer
+    background: rgb(0,0,0)
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(9,9,121,1) 15%, rgba(0,212,255,1) 100%)
+    box-sizing: border-box
+    padding: 1rem
+    margin: 2rem 0 0
+    width: 100%
+    -webkit-transition: all 1s 
+    transition: all 1s
+    @media (min-width: $breakpoint-tablet)
+        padding: 2rem
+        margin: -110px 0 0
+    p
+        color: white
+        font-family: $main-font
+        font-size: .8rem
+        text-align: center
+        @media (min-width: $breakpoint-tablet)
+            font-size: 1rem
+    a
+        color: white
+.noMargin
+        margin: 1rem 0 0
+        -webkit-transition: all 1s
+        transition: all 1s
+    
+hr
+    margin: 2rem 0 0
+    padding: 0
+    
+#erroTxt
+    color: #EF2334
+    

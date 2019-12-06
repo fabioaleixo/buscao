@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscão - Busque Pela Raça do Cão</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="estilos/master.css">
+    <link href="https://fonts.googleapis.com/css?family=Solway&display=swap" id="defineFonte" rel="stylesheet">
+</head>
+
+<body>
+    
+    <header>
+        <div><a href="index.html"><img src="imagens/logo-buscao.png" alt="loog buscão" id="logo"></a><h1 class="tit">Buscão <small>Busque pela raça do cão</small></h1></div>
+    </header>
+    
+    <section>
+        <div class="img-holder">
+            <h3 id="nomeCao"></h3>
+            <img src="imagens/ico-loading.gif" alt="carregando imagem" id="icoLoading">
+            <img src="imagens/img-cao.png" alt="busque ao lado" id="imgCao">
+        </div>
+        <div>
+            <h2 class="mudartxt">Busque pela lista de raças abaixo...</h2>
+            <select id="raca-select"></select>
+            <h2>...ou pelo nome:</h2>
+            <input type="text" placeholder="Escreva o nome da raça" id="raca-input">
+            <button id="btn-refresh"></button>
+            <p id="erroTxt"></p>
+            <hr noshade>
+            <p>Personalize sua busca com a fonte...</p>
+            <select id="fonte-select" class="small">
+                <option value="Solway">Solway - nossa favorita ;-) </option>
+                <option value="Roboto">Roboto</option>
+                <option value="Indie Flower">Indie Flower</option>
+                <option value="Fredoka One">Fredoka One</option>
+                <option value="Old Standard TT">Old Standard TT</option>
+            </select>
+            <p>...e a cor!</p>
+            <select id="cor-select" class="small">
+                <option value="EF2334">Blood Sugar Red Magic</option>
+                <option value="B8337A">Shocking Purple</option>
+                <option value="FF582C">Citric Orange</option>
+                <option value="0D1983">Sailor Blue</option>
+                <option value="0F8DCF">Sky Blue</option>
+            </select>
+            <button id="btnSalvar">Salvar seu estilo</button>
+        </div>
+    </section>
+    
+    <footer id="footer">
+        <p>O Buscão procura informações na API <a href="https://dog.ceo/dog-api/" target="_blank">Dog CEO</a>.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/fonte.js"></script>
+    <script src="js/cor.js"></script>
+
+</body>
+
+</html>
