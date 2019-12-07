@@ -14,7 +14,6 @@ let novaCor = document.getElementById('cor-select');
 novaCor.addEventListener("change", mudaCor);
                            
 function mudaCor () {
-    console.log(novaCor.value);
     const novaCorVal = novaCor.value;
     document.getElementById('nomeCao').style.color = "#" + novaCorVal;
 }

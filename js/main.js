@@ -12,6 +12,7 @@ dropdown.add(defaultOption);
 dropdown.selectedIndex = 0;
 
 function callUrl (qualUrl,qualEvento) {
+    window.scrollTo(0, 0);
     const url = qualUrl;
     const request = new XMLHttpRequest();
     request.open('GET', url, true);
@@ -28,6 +29,7 @@ function callUrl (qualUrl,qualEvento) {
                     option.text = dataTratada[i];
                     option.value = dataTratada[i];
                     dropdown.add(option);
+                    erro('0');
                 }
             } else if (qualEvento == 1) {
                 const icoLoading = document.getElementById("icoLoading");
@@ -43,10 +45,11 @@ function callUrl (qualUrl,qualEvento) {
                 setTimeout(function(){ imgCao.classList.add("borda"); }, 3000);
                 dropdown.selectedIndex = 0;
                 clearInput.value = '';
+                erro('0');
             } 
 
         } else {                  
-            erro('0');
+            erro('1');
         }
     }
 
@@ -62,17 +65,24 @@ callUrl('https://dog.ceo/api/breeds/list/all',0);
 
 dropdown.addEventListener("change", buildUrl);
 btnRefresh.addEventListener("click", buildUrl);
+document.querySelector('#raca-input').addEventListener('keypress', function (e) {
+    var key = e.which || e.keyCode;
+    if (key === 13) {
+      buildUrl();
+    }
+});
 
 function buildUrl() {
     const input = document.getElementById('raca-input').value;
+    const inputTratado = input.toLocaleLowerCase();
     const dropdownValue = document.getElementById('raca-select').value;
-    if (input == "" && dropdownValue == "Escolha uma raça") {
-        erro("1");
+    if (inputTratado == "" && dropdownValue == "Escolha uma raça") {
+        erro("2");
         return;
     }  
     const infoDogs = {
-        qualRaca: (input == "" && dropdownValue != "Escolha uma raça" ? dropdownValue : input),
-        nomeRaca: (input == "" && dropdownValue != "Escolha uma raça" ? dropdownValue : input)
+        qualRaca: (inputTratado == "" && dropdownValue != "Escolha uma raça" ? dropdownValue : inputTratado),
+        nomeRaca: (inputTratado == "" && dropdownValue != "Escolha uma raça" ? dropdownValue : inputTratado)
     }
     const qualRaca = infoDogs.qualRaca;
     const nomeRaca = infoDogs.nomeRaca;
@@ -86,10 +96,12 @@ function erro(erroId) {
     const erroTratado = parseInt(erroId);
     
     const erroMsg = [
-        'Raça não farejada, digo, encontrada :-(','Escreva a raça do cãozinho e, se achar, me dê um biscoitinho :-P'
+        ' ','Raça não farejada, digo, encontrada :-(','Escreva a raça do cãozinho &#x1F436;'
     ]
     
     document.getElementById('erroTxt').innerHTML = erroMsg[erroTratado];
-    document.getElementById('nomeCao').innerHTML = "";
+    if (erroTratado == 1 ) {
+        document.getElementById('nomeCao').innerHTML = "";
+    }
     
 }

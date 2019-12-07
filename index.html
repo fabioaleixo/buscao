@@ -2,8 +2,18 @@
 <html>
 
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154160556-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-154160556-1');
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buscão - Busque Pela Raça do Cão</title>
+    <link rel="icon" href="imagens/favicon.ico" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="description" content="">
     <meta name="keywords" content="">
@@ -48,16 +58,19 @@
                 <option value="0F8DCF">Sky Blue</option>
             </select>
             <button id="btnSalvar">Salvar seu estilo</button>
+            <button id="btnExcluir">Fazer outro estilo</button>
+            <p id="msgTxt"></p>
         </div>
     </section>
     
     <footer id="footer">
-        <p>O Buscão procura informações na API <a href="https://dog.ceo/dog-api/" target="_blank">Dog CEO</a>.</p>
+        <p>O Buscão busca informações na API <a href="https://dog.ceo/dog-api/" target="_blank">Dog CEO</a>.</p>
     </footer>
 
     <script src="js/main.js"></script>
     <script src="js/fonte.js"></script>
     <script src="js/cor.js"></script>
+    <script src="js/salvar.js"></script>
 
 </body>
 

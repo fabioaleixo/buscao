@@ -74,7 +74,7 @@ h3
     font-size: 3rem
     font-family: $main-font
     text-align: center
-    margin: 1.5rem 0 1rem
+    margin: 1.5rem 0 4rem
     color: #EF2334
     
 p
@@ -121,7 +121,6 @@ section div
             margin: 0
     
 #imgCao
-    display: none
     width: 100%
     -webkit-transition: all 1s
     transition: all 1s
@@ -130,7 +129,6 @@ section div
         display: block
 #imgCao.lessOpacity
     opacity: 0
-    
   
 select
     -webkit-appearance: none
@@ -191,13 +189,13 @@ button
     &:hover,&:focus
         background: rgba(9,9,121,1)
         background-image: url('../imagens/btn-refresh.png')
-        background-size: 70%
+        background-size: 50%
         background-repeat: no-repeat
         background-position: center center
-#btnSalvar
+#btnSalvar,#btnExcluir
     -webkit-border-radius: .5rem
     border-radius: .5rem
-    margin: 1rem 0
+    margin: 1rem 1rem 0 0
     background-image: none
     width: auto
     font-size: 1.2rem
@@ -242,4 +240,7 @@ hr
     
 #erroTxt
     color: #EF2334
+    
+#msgTxt
+    color: #5fce6e
     
